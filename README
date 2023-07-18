@@ -1,0 +1,7 @@
+tictactoe - Simple text-based 2-player TicTacToe game written in C
+
+AUTHOR: jfcode4
+
+INSTALLATION
+
+	make install
