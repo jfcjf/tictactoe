@@ -7,13 +7,13 @@ char player = 'X';
 void print_board()
 {
 	printf(
-		"     |     |     \n"
-		"  %c  |  %c  |  %c  \n"
-		"-----|-----|-----\n"
-		"  %c  |  %c  |  %c  \n"
-		"-----|-----|-----\n"
-		"  %c  |  %c  |  %c  \n"
-		"     |     |     \n"
+		"┌───┬───┬───┐\n"
+		"│ %c │ %c │ %c │\n"
+		"├───┼───┼───┤\n"
+		"│ %c │ %c │ %c │\n"
+		"├───┼───┼───┤\n"
+		"│ %c │ %c │ %c │\n"
+		"└───┴───┴───┘\n"
 		"\n",
 		board[0], board[1], board[2],
 		board[3], board[4], board[5],
@@ -60,11 +60,11 @@ void player_move()
 int main()
 {
 	int turn;
+	print_board();
 	for (turn = 0; turn < 9; turn++) {
-		print_board();
 		player_move();
+		print_board();
 		if (has_won()) {
-			print_board();
 			printf("%c has won this game! Congratulations!\n", player);
 			return 0;
 		}
